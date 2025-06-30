@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+jwt:
+  secret: "4baef719a345bcdea34fe18adcf314efb13f9d476b24f8cd1a223c58b4f45d3a"
+  expiration: 86400000 # 2 hour in ms
+spring:
+  flyway:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crm_db
+    username: postgres
+    password: '@Nathalie2024'
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        type:
+          string-array: io.hypersistence.utils.hibernate.type.array.StringArrayType
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+  logging:
+    level:
+      org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: OFF
+      org.hibernate.SQL: DEBUG
+      org.hibernate.engine.jdbc.connections: DEBUG
+      root: INFO
+      org:
+        springframework:
+          SQL: DEBUG
+          type: TRACE
+          web: DEBUG
+          security: DEBUG
+          http:
+            converter:
+              json: DEBUG
+
+#  env:
+#    - name: SPRING_PROFILES_ACTIVE
+#      value: dev

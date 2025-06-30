@@ -1,0 +1,20 @@
+{
+  "welcome_title": "Plateforme de gestion e-commerce",
+  "choose_language": "Choisissez votre langue",
+  "english": "Anglais",
+  "french": "Français",
+  "signinForm":{
+    "title": "Connexion",
+    "signin.or": "Vous n'avez pas de compte ?",
+    "createAccount":"créer un compte",
+    "email":"email",
+    "invalidEmail": "Email invalide",
+    "invalidPassword": "Mot de passe invalide",
+    "shortPassword": "Mot de passe invalide",
+    "invalidCredentials": "Access invalides",
+    "password":"password",
+    "forgotPassword": "Mot de passe oublié ?",
+    "submit":"Soumettre",
+    "error": "erreur de connection"
+  }
+}

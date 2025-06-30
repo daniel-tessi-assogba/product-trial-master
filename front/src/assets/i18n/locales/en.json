@@ -1,0 +1,19 @@
+{
+  "welcome_title": "E-commerce platforme",
+  "choose_language": "Choose your language",
+  "english": "English",
+  "french": "French",
+  "signinForm":{
+    "title": "Login",
+    "signin.or": "Don't have an account ?",
+    "createAccount":"create account",
+    "email":"email",
+    "password":"password",
+    "invalidEmail": "Invalid email",
+    "invalidPassword": "Invalid password",
+    "invalidCredentials": "Invalid credentials",
+    "forgotPassword": "Forgot password ?",
+    "submit":"Submit",
+    "error": "Connection error"
+  }
+}

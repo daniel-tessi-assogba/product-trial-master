@@ -1,0 +1,42 @@
+<div class="signin-container">
+  <div class="signin-form">
+    <select (change)="switchLanguage($event)" [value]="currentLang">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+
+    <img src="assets/icons/icon-72x72.png" alt="Logo" class="signin-logo" />
+
+    <h2>{{ 'signinForm.title' | translate }}</h2>
+    <p>
+      {{ 'signinForm.signin.or' | translate }}
+      <span class="link" (click)="navigateTo('/signup')">{{ 'signinForm.createAccount' | translate }}</span>
+    </p>
+
+    <form [formGroup]="form" (ngSubmit)="handleLogin()">
+      <div class="input-group" [class.error]="form.get('email')?.invalid && form.get('email')?.touched">
+        <input type="email" formControlName="email" placeholder="{{ 'signinForm.email' | translate }}" />
+        <span class="error-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          {{ 'signinForm.invalidEmail' | translate }}
+        </span>
+      </div>
+
+      <div class="input-group" [class.error]="form.get('password')?.invalid && form.get('password')?.touched">
+        <input [type]="secureTextEntry ? 'password' : 'text'" formControlName="password" placeholder="{{ 'signinForm.password' | translate }}" />
+        <button type="button" class="toggle-btn" (click)="togglePasswordVisibility()">
+          <span class="material-icons">{{ secureTextEntry ? 'visibility_off' : 'visibility' }}</span>
+        </button>
+        <span class="error-text" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          {{ 'signinForm.shortPassword' | translate }}
+        </span>
+      </div>
+
+      <p class="forgot-text">{{ 'signinForm.forgotPassword' | translate }}</p>
+
+      <button class="signin-button" type="submit" [disabled]="isLoading">
+        <span *ngIf="!isLoading">{{ 'signinForm.submit' | translate }}</span>
+        <span *ngIf="isLoading" class="spinner"></span>
+      </button>
+    </form>
+  </div>
+</div>
