@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/crm_db
     username: postgres
-    password: '@Nathalie2024'
+    password: 'xxxxxx'
   jpa:
     show-sql: true
     properties:

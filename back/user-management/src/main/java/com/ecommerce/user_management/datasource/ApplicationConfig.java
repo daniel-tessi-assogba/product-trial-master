@@ -13,7 +13,7 @@ public class ApplicationConfig {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/crm_db");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("@Nathalie2024");
+        dataSource.setPassword("xxxxx");
         return dataSource;
     }
 }
